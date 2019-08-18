@@ -1,2 +1,2 @@
-# test
+# django Project
  django web application
