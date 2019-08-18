@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login_form</title>
+	<style type="text/css">
+		input {
+			height: 50px;
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+	<div style="height: 500px; width: 400px; padding-left: 600px; padding-top: 200px;" >
+		<form action="login" method="POST">{%csrf_token%}
+			
+			
+			
+			<br><input type="text" name="username" placeholder="username" value="">
+			
+			<br><hr><input type="password" name="password" placeholder="password" value="">
+			
+			<div style="height: 200px;">
+			<br><hr><input type="submit" name="Sign-up" value="login" >
+			</div>
+</form>
+<dir>
+	
+	{% for message in messages%}
+	<h2>{{message}}</h2>
+	{%endfor%}
+</dir>
+	</dir>
+
+</body>
+</html>

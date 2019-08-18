@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}
+   Blog list
+{% endblock %}
+
+{% if form.is_valid%}
+<h1>update blog post </h1>
+{%endif%}
+
+
+
+<!-- {% include "blog/list_inline.html" %} --> 
+	<!-- <li><a href="/blog/{{object.slug}}"></a>{{object.title}}</li> -->
+
+{% block content %}
+
+
+    {% for object in object_list %}
+ 
+
+    <div class="row">
+	
+
+	{%include "blog/list_inline.html" with blog_post=object %}   <!-- this is optional -->
+		 
+     </div>
+	{%endfor%}
+{% endblock %}

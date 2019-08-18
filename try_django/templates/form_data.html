@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+
+
+
+{% block content %}
+
+      			  hi... <h1>{{name}}</h1>
+     verify your email: <h1>{{email}}</h1>
+      suggation for you:<h1>{{textarea}}</h1>
+     <p>thanks for suggetion..</p>
+
+
+{% for i,j in data.items %}
+<h1><small>{{i}}</small>)    <b>{{j}}</b></h1>
+
+
+{% endfor %}
+{% endblock %}
+

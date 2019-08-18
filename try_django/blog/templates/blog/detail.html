@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+blog details
+
+{% endblock %}
+
+
+{% block content %}
+
+
+	{%if object.img%}		
+  <img class="mx-auto"  src="{{object.img.url}}" alt="" style="max-height: 480px; max-width:720px;">{%endif%}
+
+<h1>{{object.title}} </h1>
+<h4> {{object.slug}}</h4>
+<p> {{object.content}} </p>
+
+
+<form action="delete" method="GET">
+	<button class ='btn btn-danger'>
+		delete_  
+	</button>
+</form>
+
+<form action="edit/" method="POST" >{%csrf_token%}
+	<button class ='btn btn-primary'>
+		update 
+	</button>
+</form>
+{% if request.user.is_authneticated %}
+ <h1> you ar logged in </h1>
+
+{%endif%}
+
+{% endblock %}

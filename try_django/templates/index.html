@@ -1,0 +1,589 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sahuweb</title>
+<!-- <meta charset="utf-8"> -->
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="sahuweb project">
+<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="{% static 'index.html' %}">Sahuweb</a></div>
+							
+
+
+
+
+
+
+<!-- NNNNNNNNNNNNNNNNNNNNNNNN -->
+
+
+
+
+
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li class="active"><a href="/sahuweb">Home</a></li>
+									<li class="active"><a href="/blog">Blog_Page</a></li>
+									<li class="active"><a href="/sahuweb">Contact</a></li>
+									{%if user.is_authenticated%}
+									<li class="active"><a>hello,{{user.first_name}}</a></li>
+									<li class="active"><a href="logout" name="logout">logout</a></li>
+								    {% else %}
+								    <li class="active"><a href="/account/register">register</a></li>
+									<li class="active"><a href="/account/login">login</a></li>
+								    {%endif%}
+							     </ul>
+							</nav>
+							<div class="header_phone ml-auto">Call us: 885-345-1552</div>
+
+							<!-- Hamburger -->
+
+							<div class="hamburger ml-auto">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_social d-flex flex-row align-items-center justify-content-start">
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+			<div class="menu_logo"><a href="{% static 'index.html' %}">sahuweb</a></div>
+			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
+		</div>
+		<div class="menu_content">
+			<ul>
+				<li><a href="{% static 'inex.html' %}">Home</a></li>
+				<li><a href="{% static 'about.html' %}">About us</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="{% static 'news.html' %}">News</a></li>
+				<li><a href="{% static 'contact.html' %}">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<div class="menu_phone ml-auto">Call us: 885-345-1552</div>
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		
+		<!-- Home Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+				
+				<!-- Slide -->
+				<div class="owl-item">
+					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
+					<div class="home_slider_content_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_slider_content">
+										<div class="home_title"><h2>Welcome  to in my creativity</h2></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide -->
+				<div class="owl-item">
+					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
+					<div class="home_slider_content_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_slider_content">
+										<div class="home_title"><h2>Welcome to my website Page.</h2></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide -->
+				<div class="owl-item">
+					<div class="background_image" style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
+					<div class="home_slider_content_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_slider_content">
+										<div class="home_title"><h2>Welcome to my website page</h2></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="home_page_nav">
+				<ul class="d-flex flex-column align-items-end justify-content-end">
+					<li><a href="#" data-scroll-to="#destinations">friend zone<span>01</span></a></li>
+					<li><a href="#" data-scroll-to="#testimonials">Technology<span>02</span></a></li>
+					<li><a href="#" data-scroll-to="#news">Latest<span>03</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Search -->
+
+	<div class="home_search">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_search_container">
+						<div class="home_search_title">Search your friends..</div>
+						<div class="home_search_content">
+							<form action="#" class="home_search_form" id="home_search_form">
+								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start" style="padding-left: 10px;" >
+									<!-- <input type="text" class="search_input search_input_1" placeholder="City" required="required">
+									<input type="text" class="search_input search_input_2" placeholder="Departure" required="required"> -->
+									<input type="text" class="search_input search_input_3" placeholder="friend name " required="required" style="width: 800px;">
+									<!-- <input type="text" class="search_input search_input_4" placeholder="Budget" required="required"> -->
+								
+									<button class="home_search_button" href="#" data-scroll-to="#friend">search</button>
+
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Intro -->
+
+	<div class="intro">
+		<div class="intro_background" style="background-image:url({% static 'images/intro.png' %})"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="intro_container">
+						<div class="row">
+
+							<!-- Intro Item -->
+							<div class="col-lg-4 intro_col">
+								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+									<div class="intro_icon"><img src="{% static 'images/beach.svg' %}" alt=""></div>
+									<div class="intro_content">
+										<div class="intro_title">Top friends</div>
+										<div class="intro_subtitle"><p>welcome for visiting this</p></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Intro Item -->
+							<div class="col-lg-4 intro_col">
+								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+									<div class="intro_icon"><img src="{% static 'images/wallet.svg' %}" alt=""></div>
+									<div class="intro_content">
+										<div class="intro_title">The Best requirment</div>
+										<div class="intro_subtitle"><p>again welcome </p></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Intro Item -->
+							<div class="col-lg-4 intro_col">
+								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+									<div class="intro_icon"><img src="{% static 'images/suitcase.svg' %}" alt=""></div>
+									<div class="intro_content">
+										<div class="intro_title">Amazing techno</div>
+										<div class="intro_subtitle"><p>welcome for vistitng this.</p></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<!-- Destinations -->
+
+	<div class="destinations" id="destinations">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">simply amazing sahu presented</div>
+					<div class="section_title"><h2>sahu friends</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row destinations_row">
+				<div class="col">
+					<div class="destinations_container item_grid">
+
+
+
+
+
+
+
+
+
+
+
+	
+						{% for dest in cards_list %}
+	  				<!-- Destination -->
+						<div class="destination item">
+							<div class="destination_image wrapper">
+								<img src="{{dest.img.url}}" alt="" style="max-height: 300px; max-width:350px;">
+
+<figure>
+    <figcaption>Audio</figcaption>
+    <audio controls>
+        <source src="{{ dest.track.url }}" type="audio/mp3">
+    </audio>
+    <iframe src="/account/login" type="video/mp4" width="500" height="700" controls></iframe>
+    
+    <video width="320" height="240" controls>
+        <source src="{{ dest.track.url }}" type="video/mp4">
+        <source src="{{ dest.track.url }}" type="video/ogg">
+  </video>
+
+
+          
+</figure>	
+ 						
+
+ 						{% if dest.favourite %}
+
+								<div class="spec_offer text-center"><a href="#">favourite</a></div>
+								
+						{%endif%}
+
+
+
+
+
+
+
+							</div>
+							<div class="destination_content">
+								{%if user.is_authenticated%}
+								<div class="destination_title"><a href="">{{dest.name}}</a></div>
+								{%else%}
+
+								<div class="destination_title"><a href="login">{{dest.name}}</a></div>
+
+								{%endif%}
+
+								<div class="destination_subtitle"><p>{{dest.desc}}.</p></div>
+								<div class="destination_price">from #{{dest.city}}</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Technology -->
+
+	<div class="testimonials" id="testimonials">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/testimonials.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">simply amazing techno</div>
+					<div class="section_title"><h2>Technology</h2></div>
+				</div>
+			</div>
+			<div class="row testimonials_row">
+				<div class="col">
+
+					<!-- Technology Slider -->
+					<div class="testimonials_slider_container">
+						<div class="owl-carousel owl-theme testimonials_slider">
+							
+							<!-- Slide -->
+							<div class="owl-item text-center">
+								<div class="testimonial">Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do</div>
+								<div class="testimonial_author">
+									<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+										<div>Rohit sahu,</div>
+										<div>client</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="owl-item text-center">
+								<div class="testimonial">Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do</div>
+								<div class="testimonial_author">
+									<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+										<div>Rohit sahu,</div>
+										<div>client</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="owl-item text-center">
+								<div class="testimonial">Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do</div>
+								<div class="testimonial_author">
+									<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+										<div>Rohit sahu,</div>
+										<div>client</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="test_nav">
+			<ul class="d-flex flex-column align-items-end justify-content-end">
+				<li><a href="#">bother<span>01</span></a></li>
+				<li><a href="#">sahu brothers<span>02</span></a></li>
+				<li><a href="#">Only Brotheres<span>03</span></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- News -->
+
+	<div class="news" id="news">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-8">
+					<div class="news_container">
+						
+						<!-- News Post -->
+						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
+							<div class="news_post_image"><img src="{% static 'images/news_1.jpg' %}" alt=""></div>
+							<div class="news_post_content">
+								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+									<div>Since</div>
+									<div>1999</div>
+								</div>
+								<div class="news_post_title"><a href="#">the best friendship for me </a></div>
+								<div class="news_post_category">
+									<ul>
+										<li><a href="#">lifestyle & personality</a></li>
+									</ul>
+								</div>
+								<div class="news_post_text">
+									<p>There are no secrets to success. It is the result of preparation, hard work, and learning from failure.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- News Post -->
+						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
+							<div class="news_post_image"><img src="{% static 'images/news_2.jpg' %}" alt=""></div>
+							<div class="news_post_content">
+								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+									<div>Since</div>
+									<div>1999</div>
+								</div>
+								<div class="news_post_title"><a href="#">Best presentation for friends..</a></div>
+								<div class="news_post_category">
+									<ul>
+										<li><a href="#">lifestyle & personality</a></li>
+									</ul>
+								</div>
+								<div class="news_post_text">
+									<p>There are no secrets to success. It is the result of preparation, hard work, and learning from failure.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- News Post -->
+						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
+							<div class="news_post_image"><img src="{% static 'images/news_3.jpg' %}" alt=""></div>
+							<div class="news_post_content">
+								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+									<div>since</div>
+									<div>1999</div>
+								</div>
+								<div class="news_post_title"><a href="#">Best presentation for frends..</a></div>
+								<div class="news_post_category">
+									<ul>
+										<li><a href="#">lifestyle & personality</a></li>
+									</ul>
+								</div>
+								<div class="news_post_text">
+									<p>Without continual growth and progress, such words as improvement, achievement, and success have no .</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- News Sidebar -->
+				<div class="col-xl-4">
+					<div class="travello">
+						<div class="background_image" style="background-image:url({% static 'images/travello.jpg' %})"></div>
+						<div class="travello_content">
+							<div class="travello_content_inner">
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+						<div class="travello_container">
+							<a href="#">
+								<div class="d-flex flex-column align-items-center justify-content-end">
+									<span class="travello_title"> there is nothing in the world for the pay except one</span>
+									<span class="travello_subtitle">I will always help you</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/footer_1.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter">
+						<div class="newsletter_title_container text-center">
+							<div class="newsletter_title">I just need to your support</div>
+							<div class="newsletter_subtitle">Supoort me for your best..</div>
+						</div>
+						<div class="newsletter_form_container">
+							<form action="#" class="newsletter_form d-flex flex-md-row flex-column align-items-start justify-content-between" id="newsletter_form">
+								<div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
+									<div><input type="text" class="newsletter_input newsletter_input_name" id="newsletter_input_name" placeholder="Name" required="required"><div class="input_border"></div></div>
+									<div><input type="email" class="newsletter_input newsletter_input_email" id="newsletter_input_email" placeholder="Your e-mail" required="required"><div class="input_border"></div></div>
+								</div>
+								<div><button class="newsletter_button">support_me</button></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_contact_row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="row">
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="{% static 'images/sign.svg' %}" alt=""></div>
+								<div class="footer_contact_title">give us a call</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>college bsnlno.:75-999-00-381</li>
+										<li>Mobile: +91885-345-1552</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="{% static 'images/trekking.svg' %}" alt=""></div>
+								<div class="footer_contact_title">presents and view by</div>
+								<div class="footer_contact_list">
+									<ul style="max-width:190px">
+										<li>Srms boys hostel</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="{% static 'images/around.svg' %}" alt=""></div>
+								<div class="footer_contact_title">send us a message</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>Rohits@gmail.com</li>
+										<li>sahu@tech.com</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col text-center">
+sahu_builds<script>document.write(new Date().getFullYear());</script> This is my first|django project <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="{% static '' %}" target="_blank">sahuweb</a>
+ </div>
+	</footer>
+</div>
+
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'plugins/Isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'plugins/scrollTo/jquery.scrollTo.min.js' %}"></script>
+<script src="{% static 'plugins/easing/easing.js' %}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

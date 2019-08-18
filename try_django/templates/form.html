@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+	{%if title%}
+	 	<h1>{{title}} </h1>
+	{%endif%}
+
+{%block content%}
+
+<form action="." method="POST" enctype='multipart/form-data'>{% csrf_token %}
+	<!-- Fullname:  <br><input type="text:" value="" name="full_name:"><br>
+	Email:   <br><input type="email" value=""  name="email:"><br>
+	Content:  <br> <input type="content" value ="" name="textarea:"><br><br> -->
+    <!-- <table cellpadding="40px" cellspacing="30px">{{ form.as_table }}</table>
+  -->
+
+	click_here:<button type="submit" style="height: 40px; width: 100px; position: absolute; display:inline-grid; padding-left: 200px;padding-top: 80px; "></button>
+
+	<h3 style="position: relative; padding-left: 110px;">submitt</h3>
+</form>
+
+
+{%endblock%}
+
+
+      {%block msg%}
+      
+      {%endblock%}

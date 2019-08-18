@@ -1,0 +1,32 @@
+{% include "base.html" %}
+{% block title %}
+
+{% endblock %}
+
+
+
+{% block content %}
+<form action="." method="POST">{% csrf_token %}
+	<!-- titlte:  <br><input type="text" value="{{object.title}}" name="title"><br>
+	image:  <br><input type="file" alt="{{object.img.url}}" name="img"><br>
+
+	slug: <br><input type="text" value="{{object.slug}}"  name="slug"><br>
+
+	Content:  <br> <input type="content" value ="{{object.content}}" name="content"><br><br> -->
+    <table cellpadding="40px" cellspacing="30px">{{ form.as_p}}</table>
+
+	click___here:      <button>   <h3>    ..update</h3> </button>
+	
+</form>
+
+<form action="/blog" method="get">
+	     cancel here:  <button>       <h3>...cancel</h3> </button>
+</form>
+
+{% if form.is_valid%}
+<h1>update blog post </h1>
+{%endif%}
+
+
+
+{% endblock %}

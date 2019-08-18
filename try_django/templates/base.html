@@ -1,0 +1,43 @@
+      <html>
+      <head>
+      <title>
+
+      {% block  title %}
+
+      {% endblock %}
+      </title>
+
+      <head>
+      <!-- Required meta tags -->
+
+
+      {% include "cs.html"%}
+
+      </head>
+      <body>
+      <h1>Hello,{{title}} world!</h1>
+     
+      <div class="container-fluid">
+      {% include 'navbar.html' %}
+      
+      
+            {% block content %}
+
+
+           
+            {% endblock %}
+
+
+
+      </div>
+
+
+
+
+      {%block msg%}
+      
+      {%endblock%}
+
+      {%include "js.html"%}
+     </body>
+      </html>

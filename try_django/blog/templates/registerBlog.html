@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration_form</title>
+	<style type="text/css">
+		input {
+			height: 30px;
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+	<div style="height: 500px; width: 400px; padding-left: 400px">
+		<form action="register" method="post">
+			{%csrf_token%}
+			
+			<input type="text" name="first_name" placeholder="first_name" value="">
+			<br><hr><input type="text" name="last_name" placeholder="first_name" value="">
+			<br><hr><input type="text" name="username" placeholder="username" value="">
+			<br><hr><input type="email" name="email" placeholder="email" value="">
+			<br><hr><input type="password" name="password1" placeholder="password" value="">
+			<br><hr><input type="password" name="password2" placeholder="re-enter" value="">
+			
+			<input type="submit" name="Sign-up" value="Sign-up">
+			<a href="/blog/login">login_here</a>
+</form>
+<dir>
+	
+	{% for message in messages%}
+	<h2>{{message}}</h2>
+	{%endfor%}
+</dir>
+	</dir>
+
+</body>
+</html>
